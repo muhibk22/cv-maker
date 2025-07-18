@@ -6,9 +6,8 @@ function App() {
   const [cv, setCv] = useState({
     contact: {
       name: "John Doe",
-      email: "johndoe@example.com",
-      phone: "+1 234 567 8901",
-      linkedin: "https://linkedin.com/in/johndoe",
+      email: "abc@xyz.com",
+      phone: "+92 234 567 8901",
       location: "City, State",
     },
     summary:
