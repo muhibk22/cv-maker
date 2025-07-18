@@ -1,0 +1,19 @@
+.form{
+    background-color: blue;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.form-container{
+    width: 40%;
+    height: 80%;
+    background-color: brown;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

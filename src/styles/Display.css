@@ -1,0 +1,13 @@
+.cv-preview{
+    width: 35%;
+    height: 80%;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-sizing: border-box;
+}
