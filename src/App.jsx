@@ -4,11 +4,15 @@ import Form from "./components/Form";
 
 function App() {
   const [cv, setCv] = useState({
-    contact: {
+    identity: {
       name: "John Doe",
       title:"Software Engineer",
+    },
+    contact: {
       email: "abc@xyz.com",
       phone: "+92 234 567 8901",
+      linkedin: "linkedin.com/abc",
+      github: "github.com/abc"
     },
     summary:
       "Results-driven software developer with 4+ years of experience in building scalable web applications using React, Node.js, and MongoDB. Strong background in full-stack development, team collaboration, and agile workflows.",
@@ -68,7 +72,6 @@ function App() {
   return (
     <div className="container">
       <Form cv={cv} setCv={setCv} />
-      <Display cv={cv} />
     </div>
   );
 }
