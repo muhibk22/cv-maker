@@ -3,7 +3,6 @@ import { useState } from "react";
 import ContactForm from "./ContactForm";
 import Display from "./Display";
 
-
 const resumeFonts = {
   calibri: `'Calibri', sans-serif`,
   helvetica: `'Helvetica', sans-serif`,
@@ -17,9 +16,13 @@ const resumeFonts = {
   roboto: `'Roboto', sans-serif`,
 };
 
-
 function Form({ cv, setCv }) {
-  const [fontKey, setFontKey] = useState("Helvatica");
+  const [fontKey, setFontKey] = useState("helvetica");
+
+  const handlePrint = () => {
+    window.print();
+  };
+
   return (
     <>
       <div className="form-container">
@@ -39,6 +42,9 @@ function Form({ cv, setCv }) {
             </select>
             <ContactForm cv={cv.contact} setCv={setCv} />
           </form>
+          <div style={{ textAlign: "center", margin: "20px 0" }}>
+            <button onClick={handlePrint}>Print CV</button>
+          </div>
         </div>
       </div>
 

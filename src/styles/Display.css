@@ -1,13 +1,115 @@
-.cv-preview{
+.cv-container{
+    height: 90vh;
     width: 35%;
-    min-height: 80%;
+    min-width: 794px;
+    overflow: scroll;
+    background-color: yellow;
+    display: flex;
     padding: 20px;
+}
+.cv-preview {
+    width: 100%;
+    max-width: 794px; 
+    height: 1123px; 
+    padding: 20px;
+    /* min-height: 100vh; */
     background-color: white;
-    box-shadow: 0 0 8px rgba(0,0,0,0.1);
-    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     color: #222;
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;  
+    box-sizing: border-box;
 }
 
+
+@media print {
+
+    body * {
+        visibility: hidden;
+  }
+
+  .cv-preview,
+  .cv-preview * {
+    visibility: visible;
+  }
+
+  .cv-preview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 20px !important;
+    background-color: white !important;
+    height: auto !important;
+  }
+
+  .cv-container {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: white !important;
+  }
+}
+
+section:not(:first-child){
+    margin: 12px 0;
+}
+section > *:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+.identity{
+    display: flex;
+    min-width: 100%;
+    justify-content: space-between;
+}
+.identity-name{
+    line-height:36px;
+}
+
+.identity-name> :last-child{
+    color: #333;
+}
+.identity-name h1{
+    font-size: 46px;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 16px;
+}
+
+.inline{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.inline-li{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.inline-li li:not(:last-child)::after {
+    content: "|";
+    margin:0 6px;
+}
+    
+
+.year{
+    font-style: italic;
+}
+
+h3{
+    margin: 10px 0;
+}
