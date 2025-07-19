@@ -6,15 +6,16 @@ function App() {
   const [cv, setCv] = useState({
     contact: {
       name: "John Doe",
+      title:"Software Engineer",
       email: "abc@xyz.com",
       phone: "+92 234 567 8901",
-      location: "City, State",
     },
     summary:
       "Results-driven software developer with 4+ years of experience in building scalable web applications using React, Node.js, and MongoDB. Strong background in full-stack development, team collaboration, and agile workflows.",
     skills: ["JavaScript", "Python", "Java"],
     experience: [
       {
+        id:1,
         title: "Frontend Developer",
         company: "XYZ Corp",
         startDate: "2021-01",
@@ -28,6 +29,7 @@ function App() {
     ],
     projects: [
       {
+        id:2,
         name: "Task Manager App",
         technologies: ["React", "Firebase"],
         description: [
@@ -38,6 +40,7 @@ function App() {
     ],
     education: [
       {
+        id:3,
         degree: "Bachelor of Science in Computer Science",
         institution: "Air University Islamabad",
         startYear: 2019,
