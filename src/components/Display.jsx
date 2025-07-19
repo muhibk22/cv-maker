@@ -18,6 +18,7 @@ function Display({ cv, fontFamily }) {
             <p>{cv.contact.github}</p>
           </div>
         </section>
+        {/* <hr/> */}
         <section className="summary">
           <h3>
             <b>Summary </b>
@@ -54,7 +55,9 @@ function Display({ cv, fontFamily }) {
                     </p>
                   </span>
                 </div>
-                <h4>{experience.company}</h4>
+                <span className="type">
+                  <h4>{experience.company}</h4>
+                </span>
 
                 <p>{experience.description}</p>
               </div>
@@ -68,36 +71,39 @@ function Display({ cv, fontFamily }) {
           {cv.projects.map((project) => {
             return (
               <div className="project-container" key={project.id}>
-                <h4>
-                  <b>{project.name}</b>
-                </h4>
-                <ul className="inline-li">
+                <span className="title">
+                  <h4>
+                    <b>{project.name}</b>
+                  </h4>
+                </span>
+                <ul className="inline-li ">
                   {project.technologies.map((technology) => {
                     return (
                       <li key={technology}>
-                        {" "}
-                        <span>{technology}</span>
+                        {technology}
                       </li>
                     );
                   })}
                 </ul>
-                {project.description}
+                <p>{project.description}</p>
               </div>
             );
           })}
         </section>
         <section className="education">
-          <h3>
-            <b>Education</b>
-          </h3>
+          <span className="title">
+            <h3>
+              <b>Education</b>
+            </h3>
+          </span>
           {cv.education.map((education) => {
             return (
               <div className="education-container" key={education.id}>
                 <div className="inline">
                   <span className="title">
-                    <h4>
-                      <b3>{education.degree}</b3>
-                    </h4>
+                    <h3>
+                      <b>{education.degree}</b>
+                    </h3>
                   </span>
                   <span className="year">
                     <p>
@@ -105,7 +111,7 @@ function Display({ cv, fontFamily }) {
                     </p>
                   </span>
                 </div>
-                <p>{education.institution}</p>
+                <h4>{education.institution}</h4>
 
                 <p>{education.gpa}</p>
               </div>
