@@ -1,0 +1,37 @@
+import { useState } from "react";
+
+function SkillsForm({skills, setCv}){
+    const [newSkill, setNewSkill]= useState("");
+
+    const handleAddSkill=(e)=>{
+        e.preventDefault(); 
+
+        const text= newSkill;
+        setCv((prevCv)=>({
+            ...prevCv, skills: [...prevCv.skills || [], text ],
+        }));
+        setNewSkill("");
+    }
+
+    const handleDeleteSkills=(skillToRemove)=>{
+        setCv((prevCv)=>({
+            ...prevCv, skills: prevCv.skills.filter((s)=> s!==skillToRemove),
+        }));
+    }
+
+    return (
+        <section className="skills-form">
+                <h2>Skills</h2>
+                <label htmlFor="skills">Add a skill</label>
+                <input type="text" value={newSkill} onChange={(e)=>{setNewSkill(e.target.value)}} placeholder="e.g Python"/>
+                <button type="button" onClick={handleAddSkill}>Submit</button>
+                <ul>
+                    {skills.map(skill=>{
+                       return (<li key={skill}>{skill} <button type="button" onClick={()=>handleDeleteSkills(skill)}>Remove</button></li>)
+                    })}
+                </ul>
+        </section>
+    )
+}
+
+export default SkillsForm;
