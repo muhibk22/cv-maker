@@ -1,5 +1,6 @@
 import "../styles/Form.css";
 import { useState } from "react";
+import IdentityForm from "./IdentityForm";
 import ContactForm from "./ContactForm";
 import Display from "./Display";
 
@@ -30,16 +31,12 @@ function Form({ cv, setCv }) {
           <h1>Edit Your CV</h1>
           <form>
             <label>Select Font:</label>
-            <select
-              value={fontKey}
-              onChange={(e) => setFontKey(e.target.value)}
-            >
+            <select value={fontKey} onChange={(e) => setFontKey(e.target.value)}>
               {Object.keys(resumeFonts).map((key) => (
-                <option key={key} value={key}>
-                  {key.charAt(0).toUpperCase() + key.slice(1)}
-                </option>
+                <option key={key} value={key}> {key.charAt(0).toUpperCase() + key.slice(1)} </option>
               ))}
             </select>
+            <IdentityForm cv={cv.identity} setCv={setCv}/>
             <ContactForm cv={cv.contact} setCv={setCv} />
           </form>
           <div style={{ textAlign: "center", margin: "20px 0" }}>

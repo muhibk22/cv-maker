@@ -2,10 +2,10 @@ import { useState } from "react";
 
 function ContactForm({ contact, setCv }) {
   const [formValues, setFormValues] = useState({
-    name: contact?.name || "John Doe",
-    email: contact?.email || "abc@xyz.com",
-    phone: contact?.phone || "+92 234 567 8901",
-    location: contact?.location || "City, State",
+    email: contact?.email || "",
+    phone: contact?.phone || "",
+    linkedin: contact?.linkedin || "",
+    github: contact?.github || "",
   });
 
   const handleChange = (e) => {
@@ -26,19 +26,20 @@ function ContactForm({ contact, setCv }) {
   };
 
   return (
-    <div className="section">
-      <label>Full Name</label>
-      <input type="text" name="name" value={formValues.name} onChange={handleChange} maxLength={50}/>
-
+    <section className="contact-form">
+      <h2>Contact Details</h2>
       <label>Email</label>
       <input type="email" name="email" value={formValues.email} onChange={handleChange} maxLength={25}/>
 
       <label>Phone No.</label>
-      <input type="text" name="phone" value={formValues.phone} onChange={handleChange}/>
+      <input type="text" name="phone" value={formValues.phone} onChange={handleChange} maxLength={16}/>
 
-      <label>Location</label>
-      <input type="text" name="location" value={formValues.location} onChange={handleChange}/>
-    </div>
+      <label>Linkedin</label>
+      <input type="text" name="linkedin" value={formValues.linkedin} onChange={handleChange} maxLength={50}/>
+
+      <label>Other Links</label>
+      <input type="url" name="github" value={formValues.github} onChange={handleChange}/>
+    </section>
   );
 }
 
