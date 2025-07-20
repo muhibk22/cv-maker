@@ -2,6 +2,7 @@ import "../styles/Form.css";
 import { useState } from "react";
 import IdentityForm from "./IdentityForm";
 import ContactForm from "./ContactForm";
+import Summary from "./Summary";
 import Display from "./Display";
 
 const resumeFonts = {
@@ -38,6 +39,7 @@ function Form({ cv, setCv }) {
             </select>
             <IdentityForm cv={cv.identity} setCv={setCv}/>
             <ContactForm cv={cv.contact} setCv={setCv} />
+            <Summary cv={cv.summary} setCv={setCv}/>
           </form>
           <div style={{ textAlign: "center", margin: "20px 0" }}>
             <button onClick={handlePrint}>Print CV</button>

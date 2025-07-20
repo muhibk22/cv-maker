@@ -19,12 +19,14 @@ function Display({ cv, fontFamily }) {
           </div>
         </section>
         <hr/>
+        { cv.summary && (
         <section className="summary">
           <h3>
             <b>Summary </b>
           </h3>
           <p>{cv.summary}</p>
-        </section>
+        </section>)
+}
         <section className="skills">
           <h3>
             <b>Skills</b>
