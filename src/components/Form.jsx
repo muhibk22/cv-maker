@@ -4,6 +4,7 @@ import IdentityForm from "./IdentityForm";
 import ContactForm from "./ContactForm";
 import Summary from "./Summary";
 import SkillsForm from "./SkillsForm";
+import LanguagesForm from "./LanguagesForm";
 import Display from "./Display";
 
 const resumeFonts = {
@@ -42,6 +43,7 @@ function Form({ cv, setCv }) {
             <ContactForm cv={cv.contact} setCv={setCv} />
             <Summary cv={cv.summary} setCv={setCv}/>
             <SkillsForm skills={cv.skills} setCv={setCv}/>
+            <LanguagesForm languages={cv.languages} setCv={setCv}/>
           </form>
           <div style={{ textAlign: "center", margin: "20px 0" }}>
             <button onClick={handlePrint}>Print CV</button>

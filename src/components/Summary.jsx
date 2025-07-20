@@ -1,9 +1,10 @@
 import { useState } from "react";
 
 function Summary({ summary, setCv }) {
-  const [text, setText] = useState("");
+  const [text, setText] = useState(summary || "");
 
   const handleChange = (e) => {
+    e.preventDefault();
     const newSummary = e.target.value;
     setText(newSummary);
     setCv((summary) => ({
@@ -16,7 +17,8 @@ function Summary({ summary, setCv }) {
     e.preventDefault(); 
     setText(""); 
     setCv((prevCv) => {
-      const { summary, ...rest } = prevCv; 
+      // eslint-disable-next-line no-unused-vars
+      const {summary, ...rest } = prevCv; 
       return rest;
     });
   };
