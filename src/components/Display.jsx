@@ -18,11 +18,10 @@ function Display({ cv, fontFamily }) {
             <p>{cv.contact.github}</p>
           </div>
         </section>
-        {/* <hr/> */}
+        <hr/>
         <section className="summary">
           <h3>
             <b>Summary </b>
-            <br />
           </h3>
           <p>{cv.summary}</p>
         </section>
@@ -46,7 +45,7 @@ function Display({ cv, fontFamily }) {
                 <div className="inline">
                   <span className="title">
                     <h4>
-                      <b>{experience.title}</b>
+                      {experience.title}
                     </h4>
                   </span>
                   <span className="year">
@@ -56,7 +55,7 @@ function Display({ cv, fontFamily }) {
                   </span>
                 </div>
                 <span className="type">
-                  <h4>{experience.company}</h4>
+                  <h5>{experience.company}</h5>
                 </span>
 
                 <p>{experience.description}</p>
@@ -72,17 +71,11 @@ function Display({ cv, fontFamily }) {
             return (
               <div className="project-container" key={project.id}>
                 <span className="title">
-                  <h4>
-                    <b>{project.name}</b>
-                  </h4>
+                  <h4>{project.name}</h4>
                 </span>
                 <ul className="inline-li ">
                   {project.technologies.map((technology) => {
-                    return (
-                      <li key={technology}>
-                        {technology}
-                      </li>
-                    );
+                    return <li key={technology}>{technology}</li>;
                   })}
                 </ul>
                 <p>{project.description}</p>
@@ -91,19 +84,16 @@ function Display({ cv, fontFamily }) {
           })}
         </section>
         <section className="education">
-          <span className="title">
-            <h3>
-              <b>Education</b>
-            </h3>
-          </span>
+          <h3>
+            <b>Education</b>
+          </h3>
+
           {cv.education.map((education) => {
             return (
               <div className="education-container" key={education.id}>
                 <div className="inline">
                   <span className="title">
-                    <h3>
-                      <b>{education.degree}</b>
-                    </h3>
+                    <h4>{education.degree}</h4>
                   </span>
                   <span className="year">
                     <p>
@@ -111,7 +101,7 @@ function Display({ cv, fontFamily }) {
                     </p>
                   </span>
                 </div>
-                <h4>{education.institution}</h4>
+                <h5>{education.institution}</h5>
 
                 <p>{education.gpa}</p>
               </div>

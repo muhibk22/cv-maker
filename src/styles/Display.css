@@ -22,14 +22,7 @@
         height: 100% !important;
   }
 
-  .cv-container {
-        display: block !important;
-        width: 100% !important;
-        min-width: 0 !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        background: white !important;
-  }
+
 }
 
 .cv-container{
@@ -55,7 +48,9 @@
     box-sizing: border-box;
 }
 
-
+.summary{
+    border: 0;
+}
 section:not(:first-child){
     margin: 10px 0;
 }
@@ -98,6 +93,8 @@ section{
     list-style: none;
     padding: 0;
     margin: 0;
+    font-size: 14px;
+    margin: 4px 0;
     
 }
 
@@ -119,17 +116,22 @@ h3{
 
 hr {
   border: none;
-  border-top: 5px solid #ccc;
+  border-bottom: 5px solid #ababab;
 }
 
 p{
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .title{
     font-size: 16px;
+    color: #000;
+    margin-bottom: 4px;
 }
 
-h4,p{
-    margin: 4px 0;
+h5,p{
+    margin-bottom: 4px;
+}
+h5{
+    font-size: 14px;
 }
