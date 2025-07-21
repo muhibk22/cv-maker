@@ -33,6 +33,7 @@
     background-color: yellow;
     display: flex;
     padding: 20px;
+    justify-content: center;
 }
 .cv-preview {
     width: 100%;
