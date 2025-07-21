@@ -24,11 +24,8 @@ function App() {
         company: "XYZ Corp",
         startDate: "2021-01",
         endDate: "Present",
-        description: [
-          "Built and maintained React components for 10+ features, reducing load time by 30%.",
-          "Collaborated with backend engineers to integrate REST APIs.",
-          "Used Git, Jira, and Agile methodology to manage sprints and track issues.",
-        ],
+        description: 
+          "Built and maintained React components for 10+ features, reducing load time by 30%. Collaborated with backend engineers to integrate REST APIs. Used Git, Jira, and Agile methodology to manage sprints and track issues.",
       },
     ],
     projects: [

@@ -4,6 +4,7 @@ import IdentityForm from "./IdentityForm";
 import ContactForm from "./ContactForm";
 import Summary from "./Summary";
 import SkillsForm from "./SkillsForm";
+import ExperienceForm from "./ExperienceForm";
 import LanguagesForm from "./LanguagesForm";
 import Display from "./Display";
 
@@ -43,6 +44,7 @@ function Form({ cv, setCv }) {
             <ContactForm cv={cv.contact} setCv={setCv} />
             <Summary cv={cv.summary} setCv={setCv}/>
             <SkillsForm skills={cv.skills} setCv={setCv}/>
+            <ExperienceForm experience={cv.experience} setCv={setCv}/>
             <LanguagesForm languages={cv.languages} setCv={setCv}/>
           </form>
           <div style={{ textAlign: "center", margin: "20px 0" }}>

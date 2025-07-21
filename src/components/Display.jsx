@@ -37,13 +37,14 @@ function Display({ cv, fontFamily }) {
             })}
           </ul>
         </section>
+        {(Array.isArray(cv.experience)) && cv.experience.length!==0 && (
         <section className="experience">
           <h3>
             <b>Experience</b>
           </h3>
           {cv.experience.map((experience) => {
             return (
-              <div className="experience-container" key={experience.id}>
+              <div className="experience-container" key={experience.title}>
                 <div className="inline">
                   <span className="title">
                     <h4>
@@ -64,7 +65,8 @@ function Display({ cv, fontFamily }) {
               </div>
             );
           })}
-        </section>
+        </section>)
+}
         <section className="project">
           <h3>
             <b>Projects</b>
