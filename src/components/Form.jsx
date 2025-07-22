@@ -5,6 +5,7 @@ import ContactForm from "./ContactForm";
 import Summary from "./Summary";
 import SkillsForm from "./SkillsForm";
 import ExperienceForm from "./ExperienceForm";
+import ProjectsForm from "./ProjectsForm";
 import Certifictions from "./Certifications";
 import LanguagesForm from "./LanguagesForm";
 import Display from "./Display";
@@ -46,6 +47,7 @@ function Form({ cv, setCv }) {
             <Summary cv={cv.summary} setCv={setCv}/>
             <SkillsForm skills={cv.skills} setCv={setCv}/>
             <ExperienceForm experience={cv.experience} setCv={setCv}/>
+            <ProjectsForm projects={cv.projects} setCV={setCv}/>
             <Certifictions certifications={cv.certifications} setCv={setCv}/>
             <LanguagesForm languages={cv.languages} setCv={setCv}/>
           </form>

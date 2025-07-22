@@ -34,10 +34,7 @@ function App() {
         name: "Task Manager App",
         url: "github.com/abc/xyc",
         technologies: ["React", "Firebase"],
-        description: [
-          "Built a to-do app with real-time sync using Firebase.",
-          "Added drag-and-drop functionality using react-beautiful-dnd.",
-        ],
+        description: "Built a to-do app with real-time sync using Firebase. Added drag-and-drop functionality using react-beautiful-dnd.",
       },
     ],
     education: [
