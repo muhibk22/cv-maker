@@ -165,3 +165,24 @@ button:hover{
 .function-btn:hover{
     background-color: rgb(0, 0, 0);
 }
+
+.ai-response ul {
+  display: block;
+  list-style-type: disc;    
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 40px;
+  padding-left: 40px;
+  text-align: left;
+  width: 90%;
+  margin: 10px;
+}
+
+.ai-response li {
+  display: list-item;
+  display: block;
+  border: none;
+  background-color: white;
+  text-align: left;
+  min-width: 100%;
+}

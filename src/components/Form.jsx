@@ -10,6 +10,7 @@ import EducationForm from "./EducationForm";
 import Certifictions from "./Certifications";
 import LanguagesForm from "./LanguagesForm";
 import Display from "./Display";
+import AiAssistant from "./AiAssistant";
 
 const resumeFonts = {
   calibri: `'Calibri', sans-serif`,
@@ -70,6 +71,7 @@ function Form({ cv, setCv }) {
             <button type="button" onClick={clearCv} className="function-btn">
               Clear CV
             </button>
+            <AiAssistant cv={cv}/>
             <IdentityForm cv={cv.identity} setCv={setCv} />
             <ContactForm cv={cv.contact} setCv={setCv} />
             <Summary cv={cv.summary} setCv={setCv} />
