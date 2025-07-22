@@ -28,6 +28,7 @@ function Form({ cv, setCv }) {
   const [fontKey, setFontKey] = useState("helvetica");
 
   const handlePrint = () => {
+    alert("Note: The recommended format for printing is A4 size. It is suggested to pick that paper size while saving the PDF. \n\nTo make the hyperlinks accessible, choose save as PDF instead of Microsoft Print to PDF.");
     window.print();
   };
 
