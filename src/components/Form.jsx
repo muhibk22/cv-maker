@@ -54,7 +54,7 @@ function Form({ cv, setCv }) {
         <div className="form">
           <h1>Edit Your CV</h1>
           <form>
-            <label>Select Font:</label>
+            <label>Font</label>
             <select
               value={fontKey}
               onChange={(e) => setFontKey(e.target.value)}
@@ -66,7 +66,7 @@ function Form({ cv, setCv }) {
                 </option>
               ))}
             </select>
-            <button type="button" onClick={clearCv}>
+            <button type="button" onClick={clearCv} className="function-btn">
               Clear CV
             </button>
             <IdentityForm cv={cv.identity} setCv={setCv} />
@@ -80,7 +80,7 @@ function Form({ cv, setCv }) {
             <LanguagesForm languages={cv.languages} setCv={setCv} />
           </form>
           <div style={{ textAlign: "center", margin: "20px 0" }}>
-            <button onClick={handlePrint}>Print CV</button>
+            <button onClick={handlePrint} className="function-btn">Print CV</button>
           </div>
         </div>
       </div>

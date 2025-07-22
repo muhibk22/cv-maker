@@ -92,7 +92,7 @@ function ExperienceForm({ experience, setCv }) {
         onChange={handleChange}
       />
       <button type="button" onClick={handleSubmit}>
-        Add
+        Add Experience
       </button>
     </section>
   );

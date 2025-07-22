@@ -30,14 +30,14 @@ function LanguagesForm({languages, setCv}){
     return (
         <section className="languages-form">
                 <h2>Languages</h2>
-                <label htmlFor="languages">Add a language</label>
-                <input type="text" value={newLanguage} onKeyDown={handleKeyDown} onChange={(e)=>{setNewLanguage(e.target.value)}} placeholder="e.g German"/>
-                <button type="button" onClick={handleAddLanguage}>Submit</button>
-                <ul>
+                 <ul>
                     {languages.map(language=>{
                        return (<li key={language}>{language} <button type="button" onClick={()=>handleDeleteLanguage(language)}>Remove</button></li>)
                     })}
                 </ul>
+                <label htmlFor="languages">Add a language</label>
+                <input type="text" value={newLanguage} onKeyDown={handleKeyDown} onChange={(e)=>{setNewLanguage(e.target.value)}} placeholder="e.g German"/>
+                <button type="button" onClick={handleAddLanguage}>Add Language</button>
         </section>
     )
 }

@@ -42,7 +42,7 @@ function Certifictions({certifications, setCv}){
             <input type="text" name="name" value={newCertification.name} onChange={handleChange}/>
             <label htmlFor="certification-year">Year</label>
             <input type="text" name="year" value={newCertification.year} onChange={handleChange}/>
-            <button type="button" onClick={handleSubmit}>Add</button>
+            <button type="button" onClick={handleSubmit}>Add Certification</button>
         </section>
     )
 }

@@ -19,6 +19,12 @@ function ProjectsForm({ projects, setCV }) {
     setTechInput("");
   };
 
+  const handleDeleteTech=(tech)=>{
+    setFormValues((prev) => ({
+        ...prev,
+        technologies: prev.technologies.filter((t) => t !== tech),
+  }));
+  }
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -53,6 +59,12 @@ function ProjectsForm({ projects, setCV }) {
     }));
   };
 
+     const handleKeyDown = (e) => {
+        if (e.key === "Enter") {
+        e.preventDefault();
+        handleAddTech(e);
+    }
+  };
 
 return (
     <section className="projects-form">
@@ -90,17 +102,18 @@ return (
         value={techInput}
         onChange={(e) => setTechInput(e.target.value)}
         placeholder="Add technology"
+        onKeyDown={handleKeyDown}
       />
       <button type="button" onClick={handleAddTech}>
         Add Tech
       </button>
       <ul>
         {formValues.technologies.map((tech, idx) => (
-          <li key={idx}>{tech}</li>
+          <li key={idx}>{tech} <button type="button" onClick={()=>handleDeleteTech(tech)}>Remove</button></li>
         ))}
       </ul>
 
-      <button type="button" onClick={handleSubmit}>Add</button>
+      <button type="button" onClick={handleSubmit}>Add Project</button>
     </section>
   );
 }

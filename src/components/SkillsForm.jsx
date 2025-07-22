@@ -30,14 +30,15 @@ function SkillsForm({skills, setCv}){
     return (
         <section className="skills-form">
                 <h2>Skills</h2>
-                <label htmlFor="skills">Add a skill</label>
-                <input type="text" value={newSkill} onKeyDown={handleKeyDown} onChange={(e)=>{setNewSkill(e.target.value)}} placeholder="e.g Python"/>
-                <button type="button" onClick={handleAddSkill}>Submit</button>
                 <ul>
                     {skills.map(skill=>{
                        return (<li key={skill}>{skill} <button type="button" onClick={()=>handleDeleteSkills(skill)}>Remove</button></li>)
                     })}
                 </ul>
+                <label htmlFor="skills">Add a skill</label>
+                <input type="text" value={newSkill} onKeyDown={handleKeyDown} onChange={(e)=>{setNewSkill(e.target.value)}} placeholder="e.g Python"/>
+                <button type="button" onClick={handleAddSkill}>Add Skill</button>
+              
         </section>
     )
 }
