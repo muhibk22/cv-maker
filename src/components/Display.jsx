@@ -125,6 +125,7 @@ function Display({ cv, fontFamily }) {
             );
           })}
         </section>
+        {cv.certifications.length!==0 && (
         <section className="certifications">
           <h3>
             <b>Certifictions</b>
@@ -133,13 +134,14 @@ function Display({ cv, fontFamily }) {
             {cv.certifications.map((certifications) => {
               return (
                 <li key={certifications.name}>
-                  {certifications.name} - {certifications.year}
+                  {certifications.name} {certifications.year? `- ${certifications.year}` : ""}
                 </li>
               );
             })}
           </ul>
         </section>
-
+        )}
+        {cv.languages.length !==0 && (
         <section className="languages">
           <h3>
             <b>Languages</b>
@@ -150,6 +152,7 @@ function Display({ cv, fontFamily }) {
             })}
           </ul>
         </section>
+        )}
       </div>
     </div>
   );
