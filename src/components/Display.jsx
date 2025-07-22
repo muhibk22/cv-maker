@@ -34,7 +34,8 @@ function Display({ cv, fontFamily }) {
           </h3>
           <p>{cv.summary}</p>
         </section>)
-}
+}       
+        {cv.skills.length>0 && (
         <section className="skills">
           <h3>
             <b>Skills</b>
@@ -45,6 +46,7 @@ function Display({ cv, fontFamily }) {
             })}
           </ul>
         </section>
+        )}
         {(Array.isArray(cv.experience)) && cv.experience.length!==0 && (
         <section className="experience">
           <h3>
@@ -74,7 +76,8 @@ function Display({ cv, fontFamily }) {
             );
           })}
         </section>)
-}
+      }       
+        { cv.projects.length >0 && (
         <section className="project">
           <h3>
             <b>Projects</b>
@@ -100,6 +103,8 @@ function Display({ cv, fontFamily }) {
             );
           })}
         </section>
+)}
+        {cv.education.length>0 && (
         <section className="education">
           <h3>
             <b>Education</b>
@@ -125,6 +130,7 @@ function Display({ cv, fontFamily }) {
             );
           })}
         </section>
+         )}
         {cv.certifications.length!==0 && (
         <section className="certifications">
           <h3>

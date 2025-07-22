@@ -58,11 +58,6 @@ function App() {
       },
     ],
     languages: ["English", "Urdu"],
-    links: {
-      portfolio: "https://johndoe.dev",
-      github: "https://github.com/johndoe",
-      blog: "https://medium.com/@johndoe",
-    },
   });
   return (
     <div className="container">
