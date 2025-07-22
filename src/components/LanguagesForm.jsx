@@ -8,6 +8,7 @@ function LanguagesForm({languages, setCv}){
 
         const text= newLanguage.trim();
         if (!text) return;
+        if (languages.includes(text)) return;
         setCv((prevCv)=>({
             ...prevCv, languages: [...prevCv.languages || [], text ],
         }));

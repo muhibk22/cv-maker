@@ -32,6 +32,7 @@ function App() {
       {
         id:2,
         name: "Task Manager App",
+        url: "github.com/abc/xyc",
         technologies: ["React", "Firebase"],
         description: [
           "Built a to-do app with real-time sync using Firebase.",

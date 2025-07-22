@@ -8,6 +8,7 @@ function SkillsForm({skills, setCv}){
 
         const text= newSkill.trim();
         if (!text) return;
+        if(skills.includes(text)) return;
         setCv((prevCv)=>({
             ...prevCv, skills: [...prevCv.skills || [], text ],
         }));

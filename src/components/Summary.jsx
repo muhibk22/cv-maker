@@ -7,8 +7,8 @@ function Summary({ summary, setCv }) {
     e.preventDefault();
     const newSummary = e.target.value;
     setText(newSummary);
-    setCv((summary) => ({
-      ...summary,
+    setCv((prevCv) => ({
+      ...prevCv,
       summary: newSummary,
     }));
   };

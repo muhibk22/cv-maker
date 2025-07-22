@@ -83,7 +83,9 @@ function ExperienceForm({ experience, setCv }) {
       />
 
       <label htmlFor="experience-description">Description</label>
-      <input
+      <textarea 
+        placeholder="Brief description of your job"
+        rows={4}
         type="text"
         value={formValues.description}
         name="description"

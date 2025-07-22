@@ -12,10 +12,18 @@ function Display({ cv, fontFamily }) {
             <h3>{cv.identity.title}</h3>
           </div>
           <div className="contact">
+            {cv.contact.email && (
             <p>{cv.contact.email}</p>
-            <p>{cv.contact.phone}</p>
-            <p>{cv.contact.linkedin}</p>
-            <p>{cv.contact.github}</p>
+            )}
+            {cv.contact.phone && (
+              <p>{cv.contact.phone}</p>
+            )}
+            { cv.contact.linkedin && (
+            <a href={cv.contact.linkedin.startsWith("http") ? cv.contact.linkedin : `https://${cv.contact.linkedin}`} target="blank">{cv.contact.linkedin}</a>
+            )} 
+            {cv.contact.github && (
+            <a href={cv.contact.github.startsWith("http") ? cv.contact.github : `https://${cv.contact.github}`} target="blank">{cv.contact.github}</a>
+            )}
           </div>
         </section>
         <hr/>
@@ -32,8 +40,8 @@ function Display({ cv, fontFamily }) {
             <b>Skills</b>
           </h3>
           <ul>
-            {cv.skills.map((skills) => {
-              return <li key={skills}>{skills}</li>;
+            {cv.skills.map((skills, index) => {
+              return <li key={index}>{skills}</li>;
             })}
           </ul>
         </section>
@@ -74,8 +82,13 @@ function Display({ cv, fontFamily }) {
           {cv.projects.map((project) => {
             return (
               <div className="project-container" key={project.id}>
-                <span className="title">
-                  <h4>{project.name}</h4>
+                <span className="inline">
+                  <span className="title">
+                    <h4>{project.name}</h4>
+                  </span>
+                  <span className="link">
+                    <a href={project.url.startsWith("http") ? project.url : `https://${project.url}`} target="_blank">{project.url}</a>
+                  </span>
                 </span>
                 <ul className="inline-li ">
                   {project.technologies.map((technology) => {

@@ -35,7 +35,7 @@ function ContactForm({ contact, setCv }) {
       <input type="text" name="phone" value={formValues.phone} onChange={handleChange} maxLength={16}/>
 
       <label>Linkedin</label>
-      <input type="text" name="linkedin" value={formValues.linkedin} onChange={handleChange} maxLength={50}/>
+      <input type="url" name="linkedin" value={formValues.linkedin} onChange={handleChange} maxLength={50}/>
 
       <label>Other Links</label>
       <input type="url" name="github" value={formValues.github} onChange={handleChange}/>
