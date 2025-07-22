@@ -21,7 +21,12 @@ body {
   align-items: center;
 }
 
-
+@media (max-width:768px){
+  .container{
+    flex-direction: column-reverse;
+  }
+  
+}
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px; 

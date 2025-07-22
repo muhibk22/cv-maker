@@ -25,10 +25,21 @@
 
 }
 
+@media (max-width:768px){
+    .cv-container{
+        max-height: 55dvh;
+        min-width: 90vw;
+        border: 2px solid black;
+        border-radius: 4px;
+        margin-top: 10px;
+        
+    }
+    
+}
+
 .cv-container{
     height: 90vh;
-    width: 35%;
-    min-width: 794px;
+    width: 50%;
     overflow: scroll;
     background-color: rgb(245, 245, 245);
     display: flex;
@@ -49,6 +60,10 @@
     flex-direction: column;
     box-sizing: border-box;
     flex-grow: 1;
+    overflow-wrap: break-word; 
+    word-wrap: break-word;      
+    word-break: break-word;   
+    white-space: normal;
 }
 
 
@@ -85,6 +100,7 @@ section{
     gap: 8px;
     font-size: 14px;
     line-height: 8px;
+    white-space: nowrap;
 }
 .contact a{
     text-decoration: none;

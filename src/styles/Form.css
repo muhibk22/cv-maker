@@ -15,13 +15,32 @@ form{
     width: 100%;
 }
 
+@media (max-width:768px){
+    .form-container{
+        max-height: 35dvh;
+        min-width: 95vw;
+        border: 2px solid black;
+        border: 0;
+        border: 2px solid black;
+        margin:10px 0;
+    }
+    .form{
+        border-radius: 0;
+    }
+
+    .form ul{
+        display: flex;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+    }
+}
 .form h1{
-    margin: 20px 0;
+    margin: 20px;
     font-weight: bold;
 }
 
 .form h2{
-    margin: 20px 0;
+    margin: 20px;
 }
 
 .form-container{
@@ -125,9 +144,15 @@ textarea{
 
 button{
     cursor: pointer;
-    padding: 5px;
+    padding: 8px 15px;
     border-radius: 4px;
     margin: 4px 2px;
+    border: none;
+    background-color: rgb(200, 200 , 200);
+    transition: background-color 0.15s;
+}
+button:hover{
+    background-color: #7b7b7b;
 }
 
 .function-btn{
