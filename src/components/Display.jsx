@@ -12,16 +12,16 @@ function Display({ cv, fontFamily }) {
             <h3>{cv.identity.title}</h3>
           </div>
           <div className="contact">
-            {cv.contact.email && (
+            {cv.contact.email.length >0 && (
             <p>{cv.contact.email}</p>
             )}
-            {cv.contact.phone && (
+            {cv.contact.phone.length>0 && (
               <p>{cv.contact.phone}</p>
             )}
-            { cv.contact.linkedin && (
+            { cv.contact.linkedin.length>0 && (
             <a href={cv.contact.linkedin.startsWith("http") ? cv.contact.linkedin : `https://${cv.contact.linkedin}`} target="blank">{cv.contact.linkedin}</a>
             )} 
-            {cv.contact.github && (
+            {cv.contact.github.length>0 && (
             <a href={cv.contact.github.startsWith("http") ? cv.contact.github : `https://${cv.contact.github}`} target="blank">{cv.contact.github}</a>
             )}
           </div>

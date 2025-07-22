@@ -31,6 +31,23 @@ function Form({ cv, setCv }) {
     window.print();
   };
 
+  const clearCv = () => {
+    setCv({
+      identity: {
+        name: "",
+        title: "",
+      },
+      contact: {},
+      summary: "",
+      skills: [],
+      experience: [],
+      projects: [],
+      education: [],
+      certifications: [],
+      languages: [],
+    });
+  };
+
   return (
     <>
       <div className="form-container">
@@ -38,20 +55,29 @@ function Form({ cv, setCv }) {
           <h1>Edit Your CV</h1>
           <form>
             <label>Select Font:</label>
-            <select value={fontKey} onChange={(e) => setFontKey(e.target.value)}>
+            <select
+              value={fontKey}
+              onChange={(e) => setFontKey(e.target.value)}
+            >
               {Object.keys(resumeFonts).map((key) => (
-                <option key={key} value={key}> {key.charAt(0).toUpperCase() + key.slice(1)} </option>
+                <option key={key} value={key}>
+                  {" "}
+                  {key.charAt(0).toUpperCase() + key.slice(1)}{" "}
+                </option>
               ))}
             </select>
-            <IdentityForm cv={cv.identity} setCv={setCv}/>
+            <button type="button" onClick={clearCv}>
+              Clear CV
+            </button>
+            <IdentityForm cv={cv.identity} setCv={setCv} />
             <ContactForm cv={cv.contact} setCv={setCv} />
-            <Summary cv={cv.summary} setCv={setCv}/>
-            <SkillsForm skills={cv.skills} setCv={setCv}/>
-            <ExperienceForm experience={cv.experience} setCv={setCv}/>
-            <ProjectsForm projects={cv.projects} setCV={setCv}/>
-            <EducationForm education={cv.education} setCv={setCv}/>
-            <Certifictions certifications={cv.certifications} setCv={setCv}/>
-            <LanguagesForm languages={cv.languages} setCv={setCv}/>
+            <Summary cv={cv.summary} setCv={setCv} />
+            <SkillsForm skills={cv.skills} setCv={setCv} />
+            <ExperienceForm experience={cv.experience} setCv={setCv} />
+            <ProjectsForm projects={cv.projects} setCV={setCv} />
+            <EducationForm education={cv.education} setCv={setCv} />
+            <Certifictions certifications={cv.certifications} setCv={setCv} />
+            <LanguagesForm languages={cv.languages} setCv={setCv} />
           </form>
           <div style={{ textAlign: "center", margin: "20px 0" }}>
             <button onClick={handlePrint}>Print CV</button>
