@@ -1,12 +1,3 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# CV-Maker
+A responsive, customizable CV/Resume builder built with React. This project allows users to input their personal, educational, and professional information through dynamic forms and instantly preview a formatted resume. Features include live preview, print-ready layout, support for custom fonts, section toggling, and the ability to export as PDF. Designed with flexibility and clean UI in mind, it’s perfect for developers looking to quickly generate professional resumes with ease.
+<img width="1909" height="907" alt="image" src="https://github.com/user-attachments/assets/0ea7bfc0-d472-42b5-a09a-b4169808298a" />
