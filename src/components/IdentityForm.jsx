@@ -22,7 +22,6 @@ function IdentityForm({identity,setCv}){
 
     return (
         <section className="identity-form">
-            <h2>Identity</h2>
             <label>Name</label>
             <input type="text" name="name" value={formValues.name} onChange={handleChange}/>
             <label>Tagline/ Title</label>

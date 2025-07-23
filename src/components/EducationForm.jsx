@@ -43,7 +43,6 @@ function EducationForm({education, setCv}){
 
     return (
         <section className="education-form">
-            <h2>Education</h2>
             <ul>
                 {education.map(ed=>{
                     return <li key={ed.id} >{ed.degree} - {ed.institution} <button type="button" onClick={()=>handleDelete(ed)}>Remove</button></li>

@@ -30,7 +30,6 @@ function ExperienceForm({ experience, setCv }) {
   };
   return (
     <section className="experience-form">
-      <h2>Experience</h2>
       <ul>
         {experience.map((experience) => {
           return (

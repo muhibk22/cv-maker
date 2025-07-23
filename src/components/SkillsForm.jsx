@@ -29,7 +29,6 @@ function SkillsForm({skills, setCv}){
 
     return (
         <section className="skills-form">
-                <h2>Skills</h2>
                 <ul>
                     {skills.map(skill=>{
                        return (<li key={skill}>{skill} <button type="button" onClick={()=>handleDeleteSkills(skill)}>Remove</button></li>)

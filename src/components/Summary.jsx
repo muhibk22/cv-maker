@@ -25,7 +25,6 @@ function Summary({ summary, setCv }) {
 
   return (
     <section className="summary">
-      <h2>Summary</h2>
       <textarea value={text} onChange={handleChange} placeholder="Enter your summary here" rows={4}/>
        <button onClick={handleDelete}> Delete Summary </button>
     </section>

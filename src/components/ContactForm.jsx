@@ -27,7 +27,6 @@ function ContactForm({ contact, setCv }) {
 
   return (
     <section className="contact-form">
-      <h2>Contact Details</h2>
       <label>Email</label>
       <input type="email" name="email" value={formValues.email} onChange={handleChange} maxLength={25}/>
 

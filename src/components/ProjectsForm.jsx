@@ -68,7 +68,6 @@ function ProjectsForm({ projects, setCV }) {
 
 return (
     <section className="projects-form">
-    <h2>Projects</h2>
     <ul>
         {
             projects.map((project)=>{

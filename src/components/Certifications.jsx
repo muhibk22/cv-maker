@@ -30,7 +30,6 @@ function Certifictions({certifications, setCv}){
     }
     return (
         <section className="certifictions-form">
-            <h2>Certifications</h2>
             <ul>
                 {
                     certifications.map(certification=>{

@@ -29,7 +29,6 @@ function LanguagesForm({languages, setCv}){
 
     return (
         <section className="languages-form">
-                <h2>Languages</h2>
                  <ul>
                     {languages.map(language=>{
                        return (<li key={language}>{language} <button type="button" onClick={()=>handleDeleteLanguage(language)}>Remove</button></li>)
