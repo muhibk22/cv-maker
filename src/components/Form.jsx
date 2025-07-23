@@ -80,9 +80,9 @@ function Form({ cv, setCv }) {
           <AiAssistant cv={cv} />
           <form>
           {sections.map((section) => (
-            <div className="section-button" key={section} onClick={() =>setActiveSection((prev) => (prev === section ? null : section))}>
+            <div key={section}>
               <section className="section-spread"> 
-              <h2>{section}</h2>
+              <h2 className="section-button" onClick={() =>setActiveSection((prev) => (prev === section ? null : section))}>{section}</h2>
               {activeSection === section && (
                 <>
                   {section === "Identity" && <IdentityForm cv={cv.identity} setCv={setCv} />}
